@@ -3,7 +3,6 @@ spring:
     openai:
       model: gpt-3.5-turbo
       api-key: ${CHATGPT_TOKEN}
-#      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
       endpoint: https://api.openai.com/v1/chat/completions
   datasource:
     url: jdbc:postgresql://localhost:5432/chatbot
