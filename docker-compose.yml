@@ -1,0 +1,24 @@
+services:
+  postgres:
+    container_name: chat_pg_sql
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Akinj@re1218
+      PGDATA: /var/lib/postgresql/data
+      POSTGRES_DB: chatbot
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - spring-chatbot
+    restart: unless-stopped
+
+networks:
+  spring-chatbot:
+    driver: bridge
+
+volumes:
+  postgres:
+    driver: local

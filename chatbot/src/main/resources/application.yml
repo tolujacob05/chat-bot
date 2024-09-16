@@ -1,0 +1,20 @@
+spring:
+  ai:
+    openai:
+      model: gpt-3.5-turbo
+      api-key: ${CHATGPT_TOKEN}
+      endpoint: https://api.openai.com/v1/chat/completions
+  datasource:
+    url: jdbc:postgresql://localhost:5432/chatbot
+    username: postgres
+    password: Akinj@re1218
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+      database: postgresql
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
